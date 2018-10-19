@@ -3,6 +3,12 @@ let nums;
 
 function setup() {
   createCanvas(400, 400);
+  
+  console.log(nums);
+}
+
+function draw() {
+
   let string = "Шифрование";
   let len = string.length;
   nums = new Array(256);
@@ -14,11 +20,7 @@ function setup() {
     nums[i] = ((nums[i - 1] % nums[x]) + nums[x] * nums[i - 1]) % 249 + 7;
   }
   nums[0] %= 249 + 7
-  console.log(nums);
-}
-
-function draw() {
-
+  
   translate(width / 2, height / 2);
   background(51);
 
