@@ -1,5 +1,6 @@
 let yoff = 1;
 let nums;
+let string = "GitHub";
 
 function setup() {
   createCanvas(400, 400);
@@ -9,7 +10,6 @@ function setup() {
 
 function draw() {
 
-  let string = "Шифрование";
   let len = string.length;
   nums = new Array(256);
   for (let i = 0; i < len; i++) {
